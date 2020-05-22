@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: dunithdazurepipelinesstarter 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dunithdazurepipelinesstarter 
+    spec:
+      containers:
+        - name: dunithdazurepipelinesstarter 
+          image: dunithd.azurecr.io/dunithdazurepipelinesstarter
+          ports:
+          - containerPort: 80
